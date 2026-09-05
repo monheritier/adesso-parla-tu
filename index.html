@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adesso parla tu</title>
+<meta name="description" content="Un capitolo che manca al libro: il tuo. Scrivi la tua riflessione sull'intelligenza artificiale e leggila nello stile del capitolo 8.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain"></div>
+
+<header class="hero">
+  <p class="kicker">Sapere di Non Sapere — Capitolo 8¹⁄₂</p>
+  <h1>Adesso parla tu.</h1>
+  <p class="hero-sub">Nel libro, al capitolo 8, l'intelligenza artificiale rompe la narrazione e prende la parola. Qui succede il contrario: scrivi tu la tua riflessione sull'AI, e la vedrai tornare formattata in quello stesso stile — spezzato, aforistico, senza sconti.</p>
+</header>
+
+<main>
+
+  <section id="scrivi" class="panel panel-write">
+    <label for="input-testo" class="panel-label">La tua riflessione</label>
+    <p class="panel-hint">Scrivi come parli. Una o due idee bastano — il resto lo spezza il capitolo.</p>
+    <textarea id="input-testo" placeholder="Comincia da qui. Cosa ti ha fatto capire, o dimenticare, l'intelligenza artificiale?" maxlength="2000"></textarea>
+    <div class="panel-footer">
+      <span id="char-count" class="char-count">0 / 2000</span>
+      <button id="btn-genera" class="btn-primary">Genera il tuo capitolo</button>
+    </div>
+  </section>
+
+  <section id="risultato" class="panel panel-result" hidden>
+    <div class="result-heading">
+      <span class="result-label">CAPITOLO 8½</span>
+      <h2>Adesso parla tu</h2>
+    </div>
+    <div id="testo-formattato" class="formatted-text" aria-live="polite"></div>
+    <div class="result-actions">
+      <button id="btn-riscrivi" class="btn-ghost">Riscrivi</button>
+      <button id="btn-copia" class="btn-ghost">Copia il testo</button>
+      <button id="btn-immagine" class="btn-primary">Salva come immagine</button>
+    </div>
+    <p id="copy-feedback" class="copy-feedback" hidden>Copiato.</p>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>Da <em>Sapere di Non Sapere</em>, di Alessio Lerede. Le riflessioni restano solo sul tuo dispositivo — non vengono inviate da nessuna parte.</p>
+</footer>
+
+<canvas id="export-canvas" hidden></canvas>
+
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
